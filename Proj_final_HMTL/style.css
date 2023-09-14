@@ -29,7 +29,8 @@ header{
 	display: flex;
     align-items: center; 
 	justify-content: space-around; 
-    background: transparent;
+    /*background: transparent;*/
+	background: rgb(12, 41, 12);
 	position: fixed;
 	top: 0;
 	transition: 0.3s;
@@ -39,10 +40,10 @@ header{
 	opacity: 0;
 }
 
-header:hover{
+/*header:hover{
 	opacity: 1;
 	background: var(--main-header-background);
-}
+}*/
 
 .logo img{
 	padding-top: 5px;
