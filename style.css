@@ -1,0 +1,19 @@
+*{
+    margin: 0; /* usado para zerar a margem, borda branca ao abrir navegador*/
+    padding: 0;/* */
+    text-decoration: none;/* Usado para que os textos não tenham nehuma implementação de css */
+}
+
+.pai{
+    background-color: rgb(60, 150, 75);
+    width: 100%;
+    height: 150px;
+    margin: 0px 0px 0px 0px;
+}
+
+.filho{
+    background-color: rgb(128, 28, 66);
+    width: 50%;
+    height: 50%;
+    margin: 0px 0px 0px 0px;
+}
