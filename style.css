@@ -1,19 +1,328 @@
+:root{
+	--main-background: #124929a6;
+	--main-fonts-color: #fff;
+	--main-decor-color:#13db0ce0;
+    --main-header-background:#021b0ae5;
+	--main-font-family: 'Palatino Linotype' ;
+	--main-fonts-text: black;
+}
 *{
-    margin: 0; /* usado para zerar a margem, borda branca ao abrir navegador*/
-    padding: 0;/* */
-    text-decoration: none;/* Usado para que os textos não tenham nehuma implementação de css */
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
 }
 
-.pai{
-    background-color: rgb(60, 150, 75);
-    width: 100%;
-    height: 150px;
-    margin: 0px 0px 0px 0px;
+main{
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--main-background);
 }
 
-.filho{
-    background-color: rgb(128, 28, 66);
-    width: 50%;
-    height: 50%;
-    margin: 0px 0px 0px 0px;
+/*────────────────── 
+       cabeçalho
+──────────────────*/
+
+header{
+	margin: 0 auto;
+	width: 100%;
+	height: 70px;
+	display: flex;
+    align-items: center; 
+	justify-content: space-around; 
+    /*background: transparent;*/
+	background: rgb(12, 41, 12);
+	position: fixed;
+	top: 0;
+	transition: 0.3s;
+	z-index: 5;
+}
+
+.nav-show{
+	opacity: 0;
+}
+
+/*header:hover{
+	opacity: 1;
+	background: var(--main-header-background);
+}*/
+
+.logo img{
+	padding-top: 5px;
+    margin-right: 100px;
+	height: 65px;
+	
+}
+
+.nav-bar{
+	list-style:none;
+	position: relative;
+	display: inline-flex;
+}
+
+a.nav-link{
+	margin: 2px;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.active{
+	background: var(--main-decor-color);
+}
+
+.nav-link:hover {
+	color: #000000;
+    background: var(--main-decor-color);
+}
+
+/*──────────────────
+       home
+──────────────────*/
+
+#home{ 	
+	margin:  auto;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#home .filter{
+	background: url('https://static.tuasaude.com/media/article/rt/ye/fitoterapia-o-que-e_61280_l.jpg') no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.20;
+}  
+
+.intro {
+	text-align:center;
+    color: var(--main-fonts-color);
+	z-index: 1;
+	margin-left: 200px;
+    margin-right: 200px;
+	padding: 20px;
+}
+
+.intro  p{
+    margin: 5px;
+	font-size:1.2rem;
+	font-family: var(--main-font-family);
+	text-align:center;
+}
+
+ h3{
+	padding-bottom: 15px;
+    letter-spacing: normal;
+    font-family: var(--main-font-family);
+	font-style: normal;
+	font-size: 50px;
+	color: var(--main-fonts-color);
+	text-shadow: 0px 0px 40px var(--main-decor-color);
+}
+
+/*──────────────────
+      plantas
+──────────────────*/
+
+#plantas{
+	margin-top:100px;
+    height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	text-align:center;
+	color: var(--main-fonts-color);
+}
+#plantas h3{
+    padding-top: 70px;
+}
+
+#plantas p{
+	font-family: var(--main-font-family);
+	font-size:1.2rem;
+	padding: 10px;
+}
+
+
+.work{
+	display: flex; 
+	flex: 1;
+    flex-wrap: wrap;
+    justify-content:center;
+	align-items: center;
+	padding: 20px 20%;
+}
+
+.pag{
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	width: 250px;
+	height:300px;
+	border-radius:12px;
+    background:var(--main-decor-color);
+}
+
+.pag img{
+	width: 100%;
+	height:80%;
+	border-radius:10px 10px 0px 0px;
+}
+
+.pag .work-content{
+	text-align: center;
+	padding: 5px 5px;
+	font-size: 1rem;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	cursor: pointer;
+}
+
+.pag a{
+	text-decoration: none;
+}
+
+.pag .work-content:hover{
+    color:#202020;
+}
+
+.pag:hover{
+	box-shadow: 0 0 1.5rem gray;
+}
+
+/*──────────────────
+      Contato
+──────────────────*/
+
+#contato{
+	margin: auto;
+	padding-bottom: 20px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--main-fonts-color);
+}
+	
+#contato p{
+	padding:10px;
+	text-align:center;
+	font-size:1.2rem;
+	font-family: var(--main-font-family);
+}
+
+.social-media{
+padding: 10px;
+display: flex;
+position: center;
+align-items: space-around;
+justify-content: center;
+}
+
+.logo-rede{
+    max-width: 60px;
+    max-height: 60px;
+
+}
+
+#name h3{
+	text-align:left;
+    color: var(--main-fonts-color);
+    font-size:2rem;
+	margin-left: 200px;
+    margin-right: 200px;
+}
+
+#name p{
+        margin-left: 220px;
+        font-size:1.2rem;
+        font-family: var(--main-font-family);
+        color: var(--main-fonts-color);
+        text-align:left;
+}
+
+/*──────────────────
+      CARQUEJA
+──────────────────*/
+
+#homeCarqueja{ 	
+	margin:  0px;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+	height: 250px;
+}
+
+#homeCarqueja .filter{
+	background: url('https://renatabarrantes.com.br/wp-content/uploads/2022/11/Carqueja-1600x700_1.jpg') no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+	bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.50;
+	height: 300px;
+}   
+
+/*──────────────────
+      CIDREIRA
+──────────────────*/
+
+#homeCidreira{ 	
+	margin:  0px;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+	height: 250px;
+}
+
+#homeCidreira.filter{
+	background: url('https://thumbs.dreamstime.com/b/hortel%C3%A3-da-colheita-da-m%C3%A3o-40603052.jpg') no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+	bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.50;
+	height: 300px;
+} 
+
+.text {
+	text-align:center;
+	color: var(--main-fonts-color);
+	z-index: 1;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding: 20px;
+}
+
+.text  p{
+	margin: 5px;
+	font-size:1.2rem;
+	font-family: var(--main-fonts-color);
+	text-align:center;
+	text-align: justify;
 }
